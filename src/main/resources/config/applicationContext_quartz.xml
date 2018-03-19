@@ -17,7 +17,8 @@
     <!-- 设置执行时间   -->
     <bean id="triggerService" class="org.springframework.scheduling.quartz.CronTriggerBean">
         <property name="jobDetail" ref="taskService"/>
-        <property name="cronExpression" value="0 12 17 16 3 ? 2018"/>
+        <property name="cronExpression" value="* * * 19 3 ? 2018"/>
+        <!--<property name="cronExpression" value="0 10 9 19 3 ? 2018"/>-->
     </bean>
 
     <!-- 任务加入监听中 -->
