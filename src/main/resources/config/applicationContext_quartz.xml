@@ -17,7 +17,7 @@
     <!-- 设置执行时间   -->
     <bean id="triggerService" class="org.springframework.scheduling.quartz.CronTriggerBean">
         <property name="jobDetail" ref="taskService"/>
-        <property name="cronExpression" value="0 17 16 19 3 ? 2018"/>
+        <property name="cronExpression" value="0 17 18 20 3 ? 2018"/>
         <!--<property name="cronExpression" value="0 34 10 19 3 ? 2018"/>-->
     </bean>
 
@@ -32,7 +32,7 @@
         <property name="quartzProperties">
             <props>
                 <prop key="org.quartz.threadPool.class">org.quartz.simpl.SimpleThreadPool</prop>
-                <prop key="org.quartz.threadPool.threadCount">1</prop>
+                <prop key="org.quartz.threadPool.threadCount">2</prop>
                 <prop key="org.quartz.jobStore.class">org.quartz.simpl.RAMJobStore</prop>
                 <prop key="org.quartz.jobStore.misfireThreshold">60000</prop>
             </props>
